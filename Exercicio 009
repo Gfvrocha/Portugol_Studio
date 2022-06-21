@@ -1,0 +1,28 @@
+programa
+{
+	
+	funcao inicio()
+	{	
+		cadeia funcionario
+		real salario, r, total
+		
+		escreva("{ EXERCÍCIO 009 - Aumento Salarial }\n")
+		
+		escreva("Nome do funcionário: ")
+		leia (funcionario)
+		
+		escreva("Salário : ")
+		leia (salario) 
+		
+		escreva("Reajuste (%): ")
+		leia (r)
+		
+		total = (salario*(r/100)+ salario)
+		
+		escreva("\n--------- RESULTADO ---------\n")
+		escreva("\n"+ funcionario + " ganhava R$ " + salario + "\ne depois de ganhar " + r + " % de aumento\nvai passar a ganhar R$ " + total) 
+
+
+		
+	}
+}
