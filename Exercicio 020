@@ -1,0 +1,29 @@
+programa
+{
+	inclua biblioteca Calendario --> c
+	funcao inicio()
+	{
+		real valor 
+		logico hoatual = falso
+		inteiro h, ingresso = 20, horario = 21
+				
+		escreva("{ EXERCÍCIO 020 - Dá pra ver o filme? }\n")
+		escreva("========= CINEMA ESTUDONAUTA =========\n")
+		escreva("HORÁRIO DO FILME: "+ horario + "h - PREÇO DO INGRESSO: R$"+ingresso+ "\n")
+		escreva("-----------------------------------------------\n")
+		escreva("Quanto dinheiro você tem? R$ ")
+		leia(valor)
+		
+		h = c.hora_atual(hoatual)
+		
+		se (h  > horario) {
+			escreva("Agora são " + h + " horas. Infelizmente não é possível comprar o ingresso!\n")
+		} senao se (ingresso > valor) {
+				escreva("Agora são " + h + " horas. Infelizmente não é possível comprar o ingresso!\n")
+			} senao se (h <= horario) {
+					escreva("Agora são " + h + " horas. Você consegue comprar o ingresso!\n")
+				} senao se (valor >= ingresso) {
+						escreva("Agora são " + h + " horas. Você consegue comprar o ingresso!\n")			
+					}
+	}
+}
