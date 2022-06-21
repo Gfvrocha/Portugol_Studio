@@ -1,0 +1,16 @@
+programa
+{
+	
+	funcao inicio()
+	{ 
+		escreva( "{ EXERCÍCIO 003 - Antes e depois } \n")
+	
+		inteiro numero
+		
+		escreva(" Me diga um número: ")
+		leia (numero)
+		
+		escreva("\n O antecessor de " + numero + " é o valor " + (numero-1))
+		escreva("\n O sucessor de " + numero + " é o valor " + (numero+1))
+	}
+}
