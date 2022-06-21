@@ -1,0 +1,31 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio()
+	{
+	real arrem, arredam, arrehm, arrekm, arredm, arrecm, arremm
+	real m
+		escreva("{ EXERCÍCIO 006 - Conversor de medidas }\n")
+		escreva("Distância em metros: ")
+		leia (m)
+		
+		m = mat.arredondar(m, 2)
+		
+		arredam = mat.arredondar(m*10, 4)
+		arrehm = mat.arredondar(m*100, 4)
+		arrekm = mat.arredondar(m*1000, 4)
+		arredm = mat.arredondar(m/10, 4)
+		arrecm = mat.arredondar(m/100, 4)
+		arremm = mat.arredondar(m/1000, 4)
+		
+		escreva("\n --------- CONVERTENDO --------- \n")
+		escreva("\n"+ arrekm + " KM \n")
+		escreva(+ arrehm + " HM \n")
+		escreva(+ arredam +" DAM \n")
+		escreva(+ arredm + " DM \n")
+		escreva(+ arrecm + " CM \n")
+		escreva(+ arremm + " MM \n")
+		 		
+	}
+}
