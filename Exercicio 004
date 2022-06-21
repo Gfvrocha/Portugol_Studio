@@ -1,0 +1,28 @@
+programa
+{
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+	inteiro n1, n2
+							
+		escreva("{ EXERCÍCIO 004 - Operações Aritméticas }\n ")
+	
+	     escreva("Digite um valor: ")
+		leia(n1)
+		
+		escreva(" Digite outro valor: ")
+		leia(n2)
+		
+		escreva("\n --------- RESULTADOS ---------\n ")
+		
+		real divreal = t.inteiro_para_real(n1)/n2
+		
+		escreva("SOMA = " + (n1+n2))
+		escreva("\n DIFERENÇA = " + (n1-n2))
+		escreva("\n PRODUTO = " + (n1*n2))
+		escreva("\n DIVISÃO INTEIRA = " + (n1/n2))
+		escreva("\n DIVISÃO REAL = " + (divreal))
+		escreva("\n RESTO DA DIVISÃO = " + (n1%n2))
+	}	
+}
