@@ -1,0 +1,22 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real largura, altura
+		escreva("{ EXERCÍCIO 007 - Pintando uma parede }\n")
+		escreva("Informação importante: um litro de tinta pinta 2m² \n")
+		escreva("-------------------------------------------------\n")
+		
+		escreva("Largura da parede: ")
+		leia (largura)
+		
+		escreva("Altura da parede: ")
+		leia (altura)
+		
+		escreva("\nUma parede de " + largura + " x " + altura + " tem uma área de " + (largura*altura) + " m²\n")
+		escreva("Precisaremos de " + (largura*altura)/2 + " latas de tinta para pintar a parede toda")
+
+		
+	}
+}
