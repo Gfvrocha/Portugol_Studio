@@ -1,0 +1,36 @@
+programa
+{
+	
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+		real ano, qtd, total, dias
+		real arredondado
+	
+		escreva("{ EXERCÍCIO 010 - Não fume }\n")
+		
+		escreva("Cada cigarro reduz 10 minutos de vida\n")
+		escreva("-------------------------------------\n")
+		
+		escreva("Há quantos anos você fuma? ")
+		leia(ano)
+		
+		escreva("Quantos cigarros você fuma por dia? ")
+		leia(qtd)
+		
+		escreva("-------------------------------------\n")
+		
+		total = ano*qtd*365
+		// 365 dias por ano
+		
+		dias = total/((24*60)/10)
+		// 24 horas * 60 minutos / 10 minutos
+		
+		arredondado = mat.arredondar(dias, 2)
+		
+		escreva("Ao todo, até agora você já fumou " + total + " cigarros!\n")
+		escreva("Estima-se que você já perdeu " + arredondado + " dias de vida!\n")
+		 	
+				
+	}
+}
