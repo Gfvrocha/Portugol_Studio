@@ -1,0 +1,27 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+		real Janeiro,Fevereiro,Marco,Abril, arretotal, media
+		cadeia vendedor
+
+		escreva("Digite o nome do vendedor:")
+		leia(vendedor)
+		escreva("Digite a venda de Janeiro:")
+		leia(Janeiro)
+		escreva("Digite a venda de Fevereiro:")
+		leia(Fevereiro)
+		escreva("Digite a venda de Marco:")
+		leia(Marco)
+		escreva("Digite a venda de Abril:")
+		leia(Abril)
+		arretotal= mat.arredondar(Janeiro+Fevereiro+Marco+Abril, 2)
+		
+		media = mat.arredondar((arretotal/4), 2)
+
+	
+
+		escreva("O Vendedor: " + vendedor + " Total de vendas: " + arretotal + " Com média de vendas: " + media + " Ao Mês" )
+	}
+}
