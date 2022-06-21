@@ -1,0 +1,21 @@
+programa
+{
+	
+inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+    	
+		real preco
+		real arredondamento
+		
+		escreva("{ EXERCÍCIO 008 -  Desconto no Produto }\n")
+		
+		escreva("Qual é o preço do produto? ")
+		leia(preco)
+		
+		arredondamento = mat.arredondar((preco-(preco*5/100)), 2)
+		
+		escreva("Com 5% de desconto, o produto sai por R$ " + arredondamento )
+		
+	}
+}
