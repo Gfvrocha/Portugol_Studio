@@ -1,0 +1,27 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+	funcao inicio()
+	{	
+		cadeia cidade
+		
+		escreva("{ EXERCÍCO 011 - Analisando sua cidade }\n")
+		escreva("Em que cidade você mora? ")
+		leia(cidade)
+		
+		escreva("---------- ANALISANDO ----------\n")
+		
+		escreva("Você mora na cidade de: ")
+		
+		escreva(txt.caixa_alta(cidade))
+		
+		escreva("\nA primeira letra é: ")
+		
+		escreva (txt.obter_caracter(cidade, 0))
+		
+		escreva("\nE contem: " + (txt.numero_caracteres(cidade)) + " caracteres") 
+		//escreva(txt.numero_caracteres(cidade))
+		
+		
+	}
+}
