@@ -1,0 +1,23 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real n1, n2
+	
+		escreva("{ EXERCÍCIO 005 - Média do aluno }\n")
+		
+		escreva("Primeira nota: " )
+		leia (n1)
+		
+		escreva("Segunda nota: " )
+		leia (n2)
+		
+		escreva("As notas do aluno foram " + n1 + " e " + n2 )
+		
+		real media = (n1+n2)/2
+		
+		escreva("\n A média final foi " + media )
+		
+	}
+}
