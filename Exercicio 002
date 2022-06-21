@@ -1,0 +1,30 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia nome
+		
+		escreva("Nome do funcionario: ")
+		leia(nome)
+		
+		inteiro ano
+		
+		escreva("Ano de nascimento: ")
+		leia(ano)
+		
+		real salario
+		
+		escreva("Salário: R$ ")
+		leia(salario)
+		
+		escreva("\n--------- FICHA FUNCIONAL ---------")
+		
+		escreva("\nNOME:" + nome + "\n")
+		escreva("NASCIMENTO em " + ano + "\n")
+		escreva("SALÁRIO de R$ " + salario + "\n")
+		escreva("-----------------------------------")
+		
+		
+	}
+}
