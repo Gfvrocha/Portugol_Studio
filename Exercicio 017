@@ -1,0 +1,18 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro ano
+		
+		escreva("{ EXERCÍCIO 017 - Ano Bissexto } \n")
+		escreva("Digite um ano qualquer: ")
+		leia(ano)
+
+		se (ano%4 == 0) {
+			escreva("O ano " + ano + " É BISSEXTO! \n")
+		} senao {
+			escreva("O ano " + ano + " NÃO É BISSEXTO! \n")
+		}
+	}
+}
