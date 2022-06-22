@@ -1,0 +1,38 @@
+programa
+{	/*
+	Exercício 014 - Programa para dar desconto de 10% para o cliente que 
+	comprar acima de 500. E ultilizando a função "SE" pra mostrar na tela 
+	os valores e possiveis descontos.
+	Autor: Felipe Rocha
+	
+	*/
+	
+	funcao inicio()
+	{	
+		// Declaração de Variais	
+			real valor
+		
+		// Entrada de Dados	
+		escreva("{ EXERCÍCIO 014 - Consumidor ganha 10% de desconto }\n")
+		
+		escreva("Qual foi o valor total das suas compras? R$" )
+		leia(valor)
+		
+		escreva("--------------------------------------------\n")
+	    
+	     // Função "se" sendo ultilizada
+		se (valor <= 499 ) {
+			escreva("Você comprou R$"+ valor + " na nossa loja. Obrigado! \n" )
+		}
+		se (valor >= 500) {
+			escreva("Você comprou R$"+ valor + " na nossa loja. Obrigado!\n")
+			escreva("========== ATENÇÃO ==========\n")
+			
+			real des = (valor / 100) * 10
+			escreva("Por fazer mais de R$500 em compras, você vai receber R$"+ des + " de desconto\n")
+			
+			real vfinal = valor - des
+			escreva("O valor a ser pago é de R$"+ vfinal +"! Volte Sempre!\n")  
+		}
+	}
+}
