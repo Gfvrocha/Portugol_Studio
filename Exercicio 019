@@ -1,0 +1,24 @@
+programa
+{
+	
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+		real num, oposto, inverso
+	
+		escreva("{ EXERCÍCIO 019 - Inversor ou Oposto }\n")
+		escreva("Digite um número: ")
+		leia(num)
+
+		oposto = mat.valor_absoluto(num) 
+		inverso = 1/num
+		se (num >= 0) {
+			escreva("O inverso de " + num + " é igual a " + mat.arredondar(inverso, 3) + "\n") 
+		 
+		} senao  { 
+			escreva("O oposto de " + num + " é igual a " + mat.arredondar(oposto, 0) + "\n")
+		}
+			 
+				
+	}
+}
