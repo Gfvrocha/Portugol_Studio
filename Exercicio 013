@@ -1,0 +1,30 @@
+programa
+{	/*
+	Exercício 013 - Programa para calcular a média de um aluno, e ultilizando a função
+	" se " para mostrar na tela se a média foi maior ou igual a 7 ( media >=7)
+	Autor: Felipe Rocha
+	*/
+	
+	funcao inicio()
+	{	// Declaração de Variaveis
+		real n1, n2, media
+
+		// Entrada de dados
+		escreva("{EXERCÍCIO 013 - Bons alunos merecem parabéns }\n")
+		escreva("Digite a sua primeira nota: ")
+		leia(n1)
+		
+		escreva("Digite a sua segunda nota: ")
+		leia(n2)
+		media = (n1 + n2) / 2
+		
+		// funcão " SE " sendo ultilizada caso media for >=7
+		se (media >= 7 ) {
+			escreva("MEUS PARABÉNS ! A sua média final foi de " + media)
+			
+		}
+		se (media < 7) {
+			escreva("Sua média final foi: " + media)
+		}
+	}
+}
