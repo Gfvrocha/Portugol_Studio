@@ -1,0 +1,23 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+	
+		real dis, valor, valor1
+		
+		escreva("{ EXERCÍCIO 018 - Preço da Passagem }\n")
+		escreva("Informe a distância total da viagem, em Km: ")
+		leia(dis)
+		
+		valor = (0.50 * dis)
+		valor1 = (0.35 * dis)
+		se (dis <= 199) {
+			escreva("Uma viagem de " + dis + "Km vai custar R$0.5/Km. Valor total: R$"+ mat.arredondar(valor, 2) + "\n")
+		} senao {
+			escreva("Uma viagem de " + dis + "Km vai custar R$0.35/Km. Valor total: R$"+ mat.arredondar(valor1, 2) + "\n")
+		}
+		
+				
+	}
+}
