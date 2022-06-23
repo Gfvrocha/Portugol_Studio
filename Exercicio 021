@@ -1,0 +1,24 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	
+		inteiro numero
+		
+		escreva("{ EXERCÍCIO 021 - Positivo ou Negativo }\n")
+		escreva("Digite um número: ")
+		leia(numero)
+
+		se (numero == 0) {
+			escreva("Você digitou um número NULO \n")
+		} senao se (numero < 0) {
+			escreva("Você digitou um número NEGATIVO \n")
+			} senao se (numero % 2 == 0) {
+				escreva("Você digitou um número POSITIVO \n")
+			     } senao se (numero % 2 == 1) {
+			     	escreva("Você digitou um número NEGATIVO \n")
+			     }
+				
+			}
+	}
