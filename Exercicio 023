@@ -1,0 +1,32 @@
+programa
+{
+	inclua biblioteca Calendario --> c
+	
+	funcao inicio()
+	{
+		inteiro ano, idade, nas, em, falta, deveria, atrasado
+	
+		escreva("{ EXERCÍCIO 023 - Serviço Militar v2.0 }\n")
+		
+		escreva("Em que ano você nasceu? ")
+		leia(nas)
+		escreva("----------------------------------------\n")
+		
+		ano = c.ano_atual()
+		idade = ano - nas
+		falta = 18 - idade 
+		em = ano + falta
+		deveria = nas + 18
+		atrasado = ano - deveria 
+		
+		se (idade == 18) {
+			escreva("Você completa " + idade + " anos nesse ano de " + ano+ "\n")
+		} senao se (idade < 18) {
+			escreva("Você ainda não completou 18 anos. Vai acontecer em " + em + "\n")
+			escreva("Ainda faltam " + falta + " ano(s) \n")
+			} senao se (idade > 18) {
+				escreva("Você já deveria ter se alistado em " + deveria + "\n")
+				escreva("Você já está atrasado " + atrasado + " ano(s)\n" )
+			}
+	}
+}
