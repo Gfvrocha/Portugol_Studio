@@ -1,0 +1,23 @@
+programa
+{
+	inclua biblioteca Texto --> tx
+	funcao inicio()
+	{
+		cadeia estado
+		
+		escreva("{ EXERCÍCIO 024 - Qual é o seu estado? }\n")
+		
+		escreva("Em que estado do Brasil você nasceu? (sigla) ")
+		leia(estado)
+
+		estado = tx.caixa_alta(estado)
+		escreva("Nascendo no " + estado + " você é ")
+				
+		se (estado == "SP")	escreva("Paulista")
+		senao se (estado == "RJ") escreva("Carioca")
+		senao se (estado == "RS") escreva("Gaucho")
+		senao se (estado == "PR") escreva("Paranaense")  
+		senao escreva("natural da sua cidade, mas ainda não sei como devo te chamar.\n")
+			}
+		
+}
