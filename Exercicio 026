@@ -1,0 +1,77 @@
+programa
+{
+	inclua biblioteca Tipos --> t
+	funcao inicio()
+	{	
+		caracter op
+		inteiro n1, n2
+		
+		escreva("{ EXERCÍCIO 026 - Super Tabuada v1.0 }\n")
+		escreva("\t ====================== \t\n")
+		
+		escreva("\t + \t Adição \n")
+		escreva("\t - \t Subtração \n")
+		escreva("\t * \t Multplicação \n")
+		escreva("\t / \t Divisão \n")
+		
+		escreva("\t ====================== \t\n")
+		
+		escreva("\t Digite sua opção => ")
+		leia(op)
+		
+		escreva("Você escolheu a opção " + op + "\n")
+		// VALIDANDO
+		escolha (op) {
+			caso '1':
+				op = '+'
+				pare
+			caso '2':
+				op = '-'
+				pare
+			caso '3':
+				op = '*'
+				pare
+			caso '4':
+				op = '/'
+				pare
+			caso contrario:
+				op = '+'				
+		}
+		
+		// ENTRADA DOS OPERANDOS
+		
+		escreva("Digite o primeiro número: ")
+		leia(n1)
+		
+		escreva("Digite o segundo número: ")
+		leia(n2)
+		
+		escreva("Realizando a operação " + n1 + op + n2)
+		
+		escreva("\n====== PROCESSANDO ====== ")
+		
+		// FAZENDO A OPERAÇÃO
+		escreva("\nO resultado da operação de ")
+		escolha (op) {
+			caso '+':
+				escreva("SOMA é " + (n1+n2))
+				pare
+			caso '-':
+				escreva("SUBTRAÇÃO é " + (n1-n2))
+				pare
+			caso '*':
+				escreva("MULTIPLICAÇÃO é " + (n1*n2))
+				pare
+
+			caso '/':
+				escreva("DIVISÃO é " + (t.inteiro_para_real(n1)/n2))
+				pare
+			caso contrario:
+				escreva("\nERRO! Sua opeção não pode ser relaizada.")
+				pare		
+		}
+		escreva("\n=====================================")
+	}
+	
+}
+		
