@@ -1,0 +1,69 @@
+programa
+{
+	
+	funcao inicio()
+	{	inteiro kg, op
+		
+		escreva("{ EXERCÍCIO 027 - Seu peso nos planetas }\n")
+		
+		escreva("Qual é o seu peso aqui na Terra (Kg): ")
+		leia(kg)
+
+		escreva("\n \t  ESCOLHA UM PLANETA\n")
+		
+		escreva("\t======================\n")
+		escreva("\t1 \t Mercúrio\n")
+		escreva("\t2 \t Vênus\n")
+		escreva("\t3 \t Marte\n")
+		escreva("\t4 \t Júpiter\n")
+		escreva("\t5 \t Saturno\n")
+		escreva("\t6 \t Urano\n")
+		escreva("\t======================\n")
+		
+		escreva("\tDigite uma opção => ")
+		leia(op)
+
+				
+		escolha (op) {
+		
+		caso 1:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta MERCÚRIO, seu peso seria " + (kg * 0.37) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare
+		caso 2:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta VÊNUS, seu peso seria " + (kg * 0.88) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare
+		caso 3:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta MARTE, seu peso seria " + (kg * 0.38) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare
+		caso 4:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta JÚPITER, seu peso seria " + (kg * 2.64) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare
+		caso 5:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta SATURNO, seu peso seria " + (kg * 1.15) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare
+		caso 6:
+			escreva("\n\n---------------------------------------------------------\n")
+			escreva("No planeta URANO, seu peso seria " + (kg * 1.17) +"Kg\n")
+			escreva("---------------------------------------------------------\n")
+			escreva("\t VOLTE SEMPRE \n")
+			pare				
+			 
+		}
+		
+	}
+}
