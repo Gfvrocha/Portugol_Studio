@@ -1,0 +1,28 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{	
+		inteiro n1, n2, i1
+	
+		escreva("{ EXERCÍCIO 029 - Contagem Personalizada }\n")
+		
+		escreva("Onde começa a contagem? ")
+		leia(n1)
+		
+		escreva("Onde termina a contagem? ")
+		leia(n2)
+		
+		escreva("Qual vai ser o incremento? ")
+		leia(i1)
+		
+		enquanto (n1 <= n2){
+			escreva(n1, " - ")
+			ut.aguarde(500)
+				n1 = n1 + i1
+		}
+		escreva("FIM!")
+	}
+	
+}
