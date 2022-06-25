@@ -1,0 +1,26 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{	
+		inteiro n=1, n2, pin
+	
+		escreva("{EXERCÍCIO 030 - Jogo do Pin }\n")
+		
+		escreva("Quer contar até quanto? ")
+		leia(n2)
+		
+		 enquanto (n <= n2 ) {
+		 	se (n % 4 != 0) {
+		 		escreva(n + " - ")
+		 	} senao {
+		 		escreva("PIN!\n")
+		 	}
+		     ut.aguarde(500)
+		 	n = n+1
+		 	
+		 }
+		  escreva("FIM!")
+	}
+}
