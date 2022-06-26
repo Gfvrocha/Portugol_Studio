@@ -1,0 +1,33 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{
+		inteiro numero, sorteio, maior5 = 0, divi3 = 0, n1 = 1
+		
+		escreva("{ EXERCÍCIO 036 - analisando números }\n")
+		
+		escreva("Quantos números vou sortear? ")
+		leia(numero)
+		
+		escreva("Sorteando ", numero, " números... ")
+				
+		enquanto (n1 <= numero ) {
+			sorteio = ut.sorteia(1, 10)
+			escreva(sorteio, ".. ")
+			ut.aguarde(400)
+			se(sorteio > 5){
+				maior5++
+			} 
+			se (sorteio % 3 == 0){
+				divi3++
+			}			
+			n1++
+		}
+		escreva("\n--------------------------------------\n")
+		escreva("Dos ", numero, " números sorteados\n")
+		escreva(maior5, " são maiores que cinco\n")
+		escreva(divi3, " são divisíveis por três\n")
+		}
+	}
