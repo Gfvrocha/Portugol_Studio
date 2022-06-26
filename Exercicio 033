@@ -1,0 +1,29 @@
+programa
+{
+	
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{
+		inteiro s
+		
+		escreva("{ EXERCÍCIO 033 - Sorteio de Números }\n")
+		
+		escreva("Quantos números você quer que eu sorteie? ")
+		leia(s)
+		
+		escreva("----------------------------------------\n")
+		
+		inteiro n = 1, ns, tot = 0
+				
+		enquanto (n <= s) {
+			escreva("O ",n, "º valor sorteado foi " ,ns = ut.sorteia(1, 10) ," \n")
+			
+			ut.aguarde(300)
+			n=n+1
+			tot = tot + ns
+		}
+		escreva("-----------------------------------------\n")
+		escreva("Somando todos os valores, temos ", tot)
+	}
+}
