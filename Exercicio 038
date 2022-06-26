@@ -1,0 +1,74 @@
+programa
+{	
+	/* Programa vai cadastrar 5 pessoas, mostrar a idade nome e sexo*/
+	
+	funcao inicio()
+	{
+		cadeia nome, novoM = "", velhoM = "", novaF = "", velhaF = ""
+		caracter sexo
+		inteiro c = 1, idade, totF = 0, totM = 0
+		inteiro menorM = 0, menorF = 0, maiorM = 0, maiorF = 0
+		
+		escreva("{ EXERCÍCIO 038 }\n")
+		
+		enquanto(c <= 5){
+			escreva("---------------")
+			escreva("\n",c,"º PESSOA")
+			escreva("\n---------------")
+			escreva("\nNOME: ")
+			leia(nome)
+			escreva("SEXO F/M: ")
+			leia(sexo)
+			escreva("IDADE: ")
+			leia(idade)
+			
+		se(sexo == 'M' ou sexo == 'm'){
+			totM++
+			se(totM == 1){
+				maiorM = idade
+				velhoM = nome
+				menorM = idade
+				novoM = nome
+			} senao{
+				se(idade > maiorM) {
+					maiorM = idade
+					velhoM = nome
+				}
+				se (idade < menorM) {
+					menorM = idade
+					novoM = nome
+				}
+			}
+		}
+		senao se(sexo == 'F' ou sexo == 'm'){
+			totF++
+			se(totF == 1){
+				maiorF = idade
+				velhaF = nome
+				menorF = idade
+				novaF = nome
+			} senao{
+				se(idade > maiorF) {
+					maiorF = idade
+					velhaF = nome
+				}
+				se(idade < menorF) {
+					menorF = idade
+					novaF = nome
+				}
+			}
+		}
+		c++
+		}
+		escreva("\n==================================================================")
+		escreva("\nAo todo tivemos " , totM, " homens e " , totF, " mulheres cadastrados.")
+		escreva("\nA mulher mais jovem é a " ,novaF , " que tem " ,menorF, " anos")
+		escreva("\nA mulher mais velha é a " ,velhaF, " que tem " ,maiorF , " anos")
+		escreva("\nO homem mais jovem é o " ,novoM , " que tem " ,menorM, " anos")
+		escreva("\nO homem mais velho é o " ,velhoM, " que tem " ,maiorM , " anos")
+		escreva("\n==================================================================")
+
+		
+		
+	}
+}
