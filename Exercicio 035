@@ -1,0 +1,54 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+	
+		inteiro pessoa, kg, qtdd = 1, peso, totalpessoa = 0, homem, mulher, f = 0, m = 0
+		cadeia sexo
+				
+		escreva("{ EXERCÍCIO 035 - Pessoas }\n")
+		
+		escreva("Quantas pessoas vamos cadastrar? ")
+		leia(pessoa)
+		
+		escreva("Qual é o peso de referência (Kg)? ")
+		leia(kg)
+		
+		escreva("-------------------------------------\n")
+			
+			enquanto(qtdd <= pessoa) {
+				
+				escreva("\tPESSOA ",qtdd , " de ", pessoa)
+				escreva("\n-------------------------------------\n")
+				escreva("Peso: ")
+				leia(peso)
+				escreva("Sexo M/F: ")
+				leia(sexo)
+												
+			se(peso <= kg){
+				escreva("====== PESO DENTRO DO LIMITE (",t.inteiro_para_real(kg), "Kg) ======\n")
+				escreva("\n-------------------------------------\n")
+					
+			} senao{
+				escreva("====== PESO ACIMA DO LIMITE (", t.inteiro_para_real(kg), "Kg) ======\n")
+				escreva("\n-------------------------------------\n")
+				se (txt.caixa_alta(sexo) == "M") {
+					m++
+				} senao se (txt.caixa_alta(sexo) == "F") {
+					f++
+				}
+			totalpessoa++
+			
+			} 
+						
+			qtdd++
+			} 
+			escreva("\n-----------------------------------------------------------\n")
+			escreva("Ao todo, temos " ,totalpessoa, " pessoa(s) acima do limite de " ,t.inteiro_para_real(kg), "Kg\n")
+			escreva("E dessas pessoas, " ,m, " HOMENS e ", f, " são MULHERES \n")
+						
+			}
+}
