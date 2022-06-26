@@ -38,6 +38,5 @@ programa
 		escreva("A pessoa mais jovem é ", j, " que tem ", jovem, " anos")
 		escreva("\nA pessoa mais velha é ", v, " que tem ", velho, " anos")
 		escreva("\n======================================================\n")
-		
 	}
 }
