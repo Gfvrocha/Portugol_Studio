@@ -1,0 +1,29 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{
+		inteiro c, m
+		
+		escreva("{ EXERCÍCO 031 - Contagem Regressiva }\n")
+		
+		escreva("Sua contagem regressiva vai começar em ")
+		leia(c)
+		
+		escreva("Marcar os múltiplos de ")
+		leia(m)
+
+		enquanto (c >= 0) {
+			se (c % m == 0){
+				escreva("["+c+"] - ")
+				
+			} senao 
+			escreva(c + " - ")
+			c = c - 1
+			ut.aguarde(300)
+		}
+		escreva("FIM!!")
+
+	}
+}
