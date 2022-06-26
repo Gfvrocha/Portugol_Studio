@@ -1,0 +1,26 @@
+programa
+{
+	
+	funcao inicio()
+	{	
+		inteiro c = 1, n
+		inteiro par = 0 , impar = 0
+		
+		escreva("{ EXERCÍCIO 032 - Soma Par e Ímpar }\n")
+
+		enquanto (c<=5) {
+			escreva("Digite o " , c, "º número: ")
+			leia(n)
+			se (n % 2 ==0){
+				par = par + n
+			} senao {
+				impar = impar + n
+			}
+			
+			c = c+1
+			
+		}
+		escreva("\nA soma dos pares deu ", par)
+		escreva("\nA soma dos ímpares deu " , impar)
+	}
+}
