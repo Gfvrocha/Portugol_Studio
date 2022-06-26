@@ -1,0 +1,20 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+	funcao inicio()
+	{
+		cadeia nome
+		inteiro pnome
+		
+		escreva("{ EXERCÍCIO 012 - Seu nome }\n")
+		
+		escreva("Digite seu nome completo: ")
+		leia(nome)
+		
+		nome = nome + " "
+		escreva("\n")
+		
+		pnome= (txt.posicao_texto(" ",nome,0))
+		escreva("Seu priemiro nome é " + (txt.extrair_subtexto(nome,0,pnome)) )
+	}
+}
