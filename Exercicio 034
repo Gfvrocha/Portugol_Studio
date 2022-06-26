@@ -1,0 +1,30 @@
+programa
+{
+	inclua biblioteca Matematica --> mt
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+		inteiro v = 1, valor = 0, par = 0, impar = 0
+		inteiro totalpar = 0, totalimpar = 0
+			
+		escreva("{ EXERCÍCIO 034 - Pares e Ímpares } \n")
+		
+		enquanto (v<=5){
+			escreva("Digite o ",v , "º valor: ")
+			leia(valor)
+
+		se(valor % 2 == 0){
+			totalpar = totalpar + valor
+			par++
+			} senao{
+			totalimpar = totalimpar + valor
+			impar++
+			}
+		v++
+		}
+		escreva("------------------------------------------------\n")
+		escreva("Você digitou ",par , " números pares. A média é ", mt.arredondar(t.inteiro_para_real(totalpar) / par, 2))
+		escreva("\nVocê digitou ",impar , " números ímpares. A média é ", mt.arredondar(t.inteiro_para_real(totalimpar) / impar, 2), "\n")
+	}
+}
