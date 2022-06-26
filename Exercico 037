@@ -1,0 +1,43 @@
+programa
+{	
+	/* Programa para cadastrar 5 pessoas e sua idade. Programa vai mostrar o nome e idade da pessoa mais velha e 
+	mais nova*/
+	
+	funcao inicio()
+	{
+		cadeia nome, v = "", j = ""
+		inteiro c = 1, idade, jovem = 0, velho = 0
+		
+		escreva("{ EXERCÍCIO 037 - Mais velho e mais novo }\n")
+		enquanto(c <= 5){
+			escreva("------------\n")
+			escreva(c,"º PESSOA\n")
+			escreva("------------\n")
+			escreva("NOME: ")
+			leia(nome)
+			escreva("IDADE: ")
+			leia(idade)
+				se(c==1){
+					velho = idade
+					v = nome
+					jovem = idade
+					j = nome
+				} senao{
+					se(idade > velho){
+						velho = idade
+						v = nome
+					}
+					se (idade < jovem){
+						jovem = idade
+						j = nome
+					}
+				}
+			c++
+		}
+		escreva("======================================================\n")
+		escreva("A pessoa mais jovem é ", j, " que tem ", jovem, " anos")
+		escreva("\nA pessoa mais velha é ", v, " que tem ", velho, " anos")
+		escreva("\n======================================================\n")
+		
+	}
+}
