@@ -1,0 +1,59 @@
+programa
+{
+	inclua biblioteca Tipos --> t
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		cadeia nome, nomeV = "", nomeJ = ""
+		inteiro idade = 0, total = 0, soma = 0
+		real media = 0.0
+		inteiro velho = 0, jovem = 0
+	
+		escreva("{ EXERCÍCIO 041 - Cadastro de Amigos }\n")
+		
+		enquanto(verdadeiro) {
+		escreva("------------ NOVO AMIGO ------------")
+		escreva("\nOBS: Digite ACABOU no nome para parar")
+		escreva("\nNome: ")
+		leia(nome)
+		
+		se (nome == "ACABOU" ou nome == "acabou"){
+			escreva("*** INTERROMPIDO ***")
+			pare
+		}
+		escreva("Idade: ")
+		leia(idade)
+		total ++
+		soma =+ idade
+		// Declarando mais velho/jovem.
+		se (total == 1 ) {
+			
+			velho = idade
+			jovem = idade	
+			nomeV = nome
+			nomeJ = nome
+													
+		} se (idade < jovem) {
+				jovem = idade
+				nomeJ = nome
+			} se (idade > velho) {
+				velho = idade
+				nomeV = nome
+			}
+		// Fim do mais velho/jovem.
+				
+		
+		nome++	
+		}
+		media = t.inteiro_para_real(soma) / t.inteiro_para_real(total)
+		escreva("\n\n========== RESULTADOS ==========\n")
+		escreva("\nTotal de amigos cadastrados: ",total)
+		escreva("\nSeu amigo mais velho é ", txt.caixa_alta(nomeV),", com ", velho," anos")
+		escreva("\nSeu amigo mais jovem é ", txt.caixa_alta(nomeJ),", com ",jovem," anos")
+		escreva("\nA média de idade do grupo é de ",media )
+
+		}
+		
+	}
