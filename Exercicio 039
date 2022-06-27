@@ -1,0 +1,42 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+		inteiro c = 0, n = 0, soma = 0
+		inteiro maior = 0
+		real media = 0.0
+		
+		escreva ("{ EXERCÍCIO 039 - Lendo Dados }")
+		
+		enquanto (n != 9999) {
+			escreva ("\n---------------------\n")
+			escreva ((c+1),"º VALOR [9999 faz parar]")
+			escreva ("\n---------------------")
+			escreva ("\nNÚMERO: ")
+			leia (n)
+			se (n != 9999) {
+					soma += n
+					se (c == 0) {
+						maior = n
+					}senao {
+						se (n > maior) {
+							maior = n
+						}
+					}
+					c++
+				}
+					
+					
+		}
+		media = t.inteiro_para_real(soma) / t.inteiro_para_real(c)
+		
+		escreva ("=============== FLAG DIGITADO ===============")
+		escreva ("\nAo todo você digitou ",c, " valores")
+		escreva ("\nA soma entre eles foi ", soma)
+		escreva ("\nE a média foi ", mat.arredondar(media, 2))
+		escreva ("\nO maior valor digitado foi ", maior)
+	}
+}
