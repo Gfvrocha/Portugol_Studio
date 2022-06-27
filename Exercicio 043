@@ -1,0 +1,42 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro n, c = 0, totPar = 0, menorImpar = 0, totImpar = 0
+		caracter resp
+		
+		escreva("{ EXERCÍCIO 043 - Analisador de Números }")
+		
+		faca {
+			escreva("\nDigite o ", c+1,"º valor: ")
+			leia(n)
+			se(n % 2 == 0){
+				totPar++
+			} senao{
+				totImpar ++
+
+				se(totImpar == 1){
+					menorImpar = n
+				} senao {
+					se (n < menorImpar){
+						menorImpar = n
+					}
+				}
+			}
+			escreva("Quer continuar? [S/N]: ")
+			leia(resp)
+			c++
+
+			
+		} enquanto(resp == 'S' ou resp == 's')
+	
+	    escreva("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+	    escreva("\nAo todo você digitou ", c, " valores")
+	    escreva("\nVocê digitou ",totPar, " valores PARES")
+	    escreva("\nO valor ",menorImpar , " foi o menos número ÍMPAR digitado\n")
+
+	
+	}
+		
+}
