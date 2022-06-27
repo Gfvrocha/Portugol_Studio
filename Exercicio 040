@@ -1,0 +1,75 @@
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro c = 1, n1, n2, op = 0
+		
+		
+		
+		escreva("{ EXERCÍCIO 040 - Calculadora }")
+		
+			escreva ("\nOperando 1: ")
+			leia(n1)
+			
+			escreva ("Operando 2: ")
+			leia(n2)
+		 	
+		 	enquanto (op != 6 ){
+		 	escreva ("\n====== ESCOLHA UMA OPERAÇÃO ======")
+		 	escreva ("\n[ 1 ] Adição")
+		 	escreva ("\n[ 2 ] Subtração")
+		 	escreva ("\n[ 3 ] Multiplicação")
+		 	escreva ("\n[ 4 ] Divisão")
+		 	escreva ("\n[ 5 ] Entrar com novos dados")
+		 	escreva ("\n[ 6 ] Sair")
+		 	escreva ("\n>>>>> SUA OPÇÃO: ")
+		 	leia (op)
+		 				
+			se (op == 1) {
+				escreva ("\n-----------------------------------")
+				escreva ("\nCalculando ",n1, " + ",n2, " = ", n1+n2)
+				escreva ("\n-----------------------------------\n")
+				
+				}
+				
+			se (op == 2) {
+				escreva ("\n-----------------------------------")
+				escreva ("\nCalculando ",n1, " - ",n2, " = ", n1-n2)
+				escreva ("\n-----------------------------------\n")
+				
+				}
+				
+			se (op == 3) {
+				escreva ("\n-----------------------------------")
+				escreva ("\nCalculando ",n1, " * ",n2, " = ", n1*n2)
+				escreva ("\n-----------------------------------\n")	
+				}
+
+			se (op == 4) {
+				escreva ("\n-----------------------------------")
+				escreva ("\nCalculando ",n1, " / ",n2, " = ", n1*n2)
+				escreva ("\n-----------------------------------\n")	
+				}
+			
+				
+			se (op == 5) {
+				escreva ("\nOperando 1: ")
+				leia(n1)
+				escreva ("Operando 2: ")
+				leia(n2)
+				}
+				
+			se (op == 6) {
+				escreva ("=== SAINDO === \n")
+				escreva ("=== VOLTE SEMPRE ===\n")
+			}
+			se (op > 6) {
+				escreva ("=== Operação Invalida ===\n")
+			}
+			u.aguarde(1000)
+							
+				}
+			}
+	}
