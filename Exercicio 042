@@ -1,0 +1,69 @@
+programa
+{	/* Programa para cadastrar funcionários, e mostrar
+	   os seguintes resultados.
+		- Total de pessoas
+		- Total de Homens
+		- Total de Mulheres
+		- Média salarial dos Homens
+		- Total de Mulheres que ganham a cima de 1mil
+		- Maior salário entre Homens.
+		*/
+	
+	funcao inicio()
+	{
+		cadeia nome
+		caracter resp, sexo
+		real salario, somaSalH = 0.0, mediaSalH = 0.0, maiH = 0.0
+		inteiro total = 0, totHomens = 0, totMulheres = 0, totMil = 0
+		
+		escreva("{ EXERCÍCIO 042 - Cadastro de Funcionários }" )
+		
+		enquanto ( verdadeiro) {
+			escreva ("\nNome: ")
+			leia (nome)
+			
+			escreva ("Sexo [M/F]: ")
+			leia (sexo)
+			
+			escreva ("Salário: ")
+			leia (salario)
+
+			total++
+			se (sexo == 'M' ou sexo =='m') {
+				totHomens ++
+				somaSalH += salario
+				se (totHomens == 1) {
+					maiH = salario
+					
+				} senao {
+					se (salario > maiH) {
+						maiH = salario
+					}
+				}
+				
+			} senao se (sexo == 'F' ou sexo == 'f') {
+				totMulheres ++
+				se (salario > 1000) {
+					totMil ++
+				}
+			}
+			
+			escreva ("Quer continuar? [S/N]: ")
+			leia (resp)
+									
+			se (resp == 'n' ou resp == 'N') {
+				pare
+			}
+			escreva("------------------------------------------")
+			
+		}
+		mediaSalH = somaSalH / totHomens
+		escreva ("\n===== RESULTADOS =====\n")
+		escreva ("\nTotal de pessoas cadastradas: ", total)
+		escreva ("\nTotal de Homens: ", totHomens)
+		escreva ("\nTotal de Mulheres: ", totMulheres)
+		escreva ("\nA média salarial dos Homens é R$", mediaSalH)
+		escreva ("\nTemos ", totMil , " mulheres ganhando mais de R$1000.")
+		escreva ("\nO maior salário entre os Homens é de R#" , maiH) 
+	}
+}
