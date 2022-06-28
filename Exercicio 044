@@ -1,0 +1,46 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{
+		inteiro tot = 0, n = 0, sorteie = 0, soma = 0, maior = 0, menor = 0, n5 = 0
+		caracter resp
+
+		
+		escreva("{ EXERCÍCIO 044 - Números Sorteados }")
+		escreva("\nVou sortear vários números")
+		escreva("\n--------------------------------------")
+		faca{
+			sorteie = ut.sorteia(1, 10)
+			soma += sorteie
+			tot++
+			escreva("\nO ",tot,"º valor corteado foi: ", sorteie)
+			
+		se(tot == 1){
+			maior = sorteie
+			menor = sorteie
+
+		} se (sorteie > maior){
+			maior = sorteie
+		} senao {
+			se(sorteie < menor){
+				menor = sorteie
+			}
+			se (sorteie == 5){
+				n5++
+			}
+		}
+			escreva("\nQuer sortear mais um? [S/N]: ")
+			leia(resp)
+			
+			
+		} enquanto(resp == 'S' ou resp == 's')
+		
+		escreva("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+		escreva("\nVocê me fez sortear ",tot, " valores")
+		escreva("\nA soma de todos eles foi igual a ", soma)
+		escreva("\nO maior valor foi ",maior, " e o menor valor foi ", menor)
+		escreva("\nO número 5 foi sorteado ", n5, " vezes")
+	}
+}
