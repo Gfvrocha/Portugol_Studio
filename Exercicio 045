@@ -39,8 +39,7 @@ programa
 				}
 			
 			}
-		  			
-			
+					
 		}enquanto( nao acertou)
 		escreva("\nFim do Jogo !!!")
 		
