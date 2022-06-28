@@ -1,0 +1,20 @@
+programa
+{
+	
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+	inteiro c, n
+	
+			escreva("{ EXERCÍCIO 046 - Tabuada }\n")
+			
+			escreva("Qual número você gostaria de saber a tabuada? ")
+			leia(n)
+
+		para(c = 1; c <= 10; c++){
+			u.aguarde(300)
+			escreva(n," x ",c," = ", (n*c),"\n")
+		}
+		
+	}
+}

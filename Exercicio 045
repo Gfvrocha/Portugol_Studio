@@ -1,0 +1,50 @@
+programa
+{
+	inclua biblioteca Util --> ut
+	
+	funcao inicio()
+	{
+		inteiro c = 1, n, sorteio
+		logico acertou = falso
+
+		
+		escreva("{ EXERCÍCIO 045 - Jogo de Adivinhar }")
+		escreva("\nVou pensar em um número entre 1 e 10")
+		escreva("\nVocê tem 3 chances para adivinhar")
+		escreva("\n-----------------------------------")
+		sorteio = ut.sorteia(1, 10)
+		faca{
+			
+			escreva("\nChance de no. ",c,"/3. Em que número eu pensei? ")
+			leia(n)
+			
+			se(n == sorteio){
+				acertou = verdadeiro
+				escreva("\nACERTOU em ",c, " tentativas")
+				pare
+			} senao {
+				escreva("\nAinda não foi dessa vez")
+				c++
+				se (c <= 3) {
+				escreva("\nVou te dar outra chance..")
+					se(n < sorteio){
+					escreva("\nChute um valor MAIOR\n")
+			} senao {
+				escreva("\nChute um valor MENOR\n")
+			}
+				}
+				senao {
+					escreva("\nSuas chaces ACABARAM !!!")
+					pare
+				}
+			
+			}
+		  			
+			
+		}enquanto( nao acertou)
+		escreva("\nFim do Jogo !!!")
+		
+	}
+	
+	
+}
