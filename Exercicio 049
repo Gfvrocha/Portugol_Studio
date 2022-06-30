@@ -1,0 +1,31 @@
+programa
+{
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		inteiro n, n1 = 0, n2 = 1, n3
+		
+		escreva("{ EXERCÍCIO 049 - Sequência de Fibonacci }")
+		
+		escreva("\nQuantos elementos você quer exibir? ")
+		leia(n)
+
+		escreva(n1, " ")
+		u.aguarde(500)
+		escreva(n2, " ")
+		u.aguarde(500)
+
+		para (inteiro c = 3; c <= n; c++){
+				n3 = n1 + n2					
+				
+			escreva(n3 , " ")
+			u.aguarde(500)
+			n1 = n2
+			n2 = n3
+			
+		}
+	     escreva("=== PRONTO ===")	
+	     
+	}
+	
+}
