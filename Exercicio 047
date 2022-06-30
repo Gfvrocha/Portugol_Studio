@@ -1,0 +1,36 @@
+programa
+{
+	
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		inteiro i, f, p
+		
+		escreva("{ EXERCÍCIO 047 - Contagem Personalizada }\n")
+		
+		escreva("INÍCIO = ")
+		leia(i)
+		
+		escreva("FINAL = ")
+		leia(f)
+		
+		escreva("PASSO = ")
+		leia(p)
+		
+		se (p <= 0) p *= -1
+			se(i < f) {
+				para (inteiro c = i; c <= f; c+=p) {
+				u.aguarde(400)
+				escreva(c,".. ")
+			 }
+		} senao {
+				para (inteiro c = i; c >= f; c-=p) {
+				u.aguarde(400)
+				escreva(c,".. ")
+			 } 
+		}
+							
+	escreva("!! ACABOU !! \n")	
+	}
+	
+}
