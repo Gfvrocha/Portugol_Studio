@@ -1,0 +1,32 @@
+programa
+{
+	
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		inteiro n, primo = 0, nprimo = 0, vezes = 0, nvezes = 0, tot = 0
+				
+		escreva("{ EXERCÍCIO 048 - Número Primo }\n")
+		
+		escreva("Digite um número: ")
+		leia(n)
+		
+		para ( inteiro c = 1; c <= n; c++){
+			
+			se (n % c == 0){
+				escreva("[",c,"]", " ")
+				tot++
+				          } senao{
+				          	escreva(c, " ")
+				                 }
+				         u.aguarde(400)
+		                                  }
+				escreva("\n\nO número ",n, " foi divisível ",tot, " vezes")
+				se (tot <= 2){
+					escreva("\nLogo, ele é PRIMO\n")
+				              } senao {
+					               escreva("\nEle NÃO É PRIMO\n")
+					
+					   }
+	}
+}
