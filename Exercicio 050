@@ -1,0 +1,37 @@
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro i, f, c = 1, tab = 0
+		
+		escreva("{ EXERCÍCIO 050 - Tabuadas }")
+		escreva("\nTabuada INICIAL = ")
+		leia(i)
+		escreva("Tabuada FINAL = ")
+		leia(f)
+
+		tab = i
+				
+		para(inteiro x = 1; x <= f; x++){
+			escreva("\n-----------------------------")
+			escreva("\n\tTABUADA DE ", tab)
+			escreva("\n-----------------------------")
+			
+			tab++
+							
+			para(inteiro y = 1; y <= 10; y++){
+				escreva("\n\t",i, " x ", c, " = ", i*c)
+				
+				u.aguarde(500)
+			c++
+			
+			}
+		
+		i++	
+		}
+		
+		escreva("\n")
+	}
+}
