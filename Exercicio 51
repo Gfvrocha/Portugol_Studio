@@ -1,0 +1,31 @@
+programa
+{	
+	/* Programação Básica - Prof. Gustavo Guanabara	
+	 *  Exercício 051 - Triangulo
+	 *  - Programa vai montar um triagulo com a
+	 *  quantidade de andares que usuario digitar.
+	 *  Felipe Rocha
+	 */
+	
+	inclua biblioteca Util --> u
+	
+funcao inicio()
+	{
+		inteiro n = 0, c = 0, tot = 2
+		
+		escreva("Quantos andares quer no seu triangulo? ")
+		leia(n)
+		
+		para(inteiro x = 1; x <= n; x++){
+			escreva("\n")
+			u.aguarde(300)
+				
+			para(inteiro y = 1; y <= tot ; y++){
+				escreva("*")
+				u.aguarde(300)
+			}
+		tot += 2
+		}
+		escreva("\n\nTriangulo com ", n, " andares montados\n")
+	}
+}
