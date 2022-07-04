@@ -25,6 +25,7 @@ funcao inicio()
 				u.aguarde(300)
 			}
 		tot += 2
+		
 		}
 		escreva("\n\nTriangulo com ", n, " andares montados\n")
 	}
