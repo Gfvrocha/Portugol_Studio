@@ -1,0 +1,43 @@
+programa
+{
+	/* Programação Básica - Prof. Gustavo Guanabara
+	 * Exercício 052 - Pirâmide invertida 
+	 * Aprimorando o uso do "para" .. laço aninhado.
+	 *  - Usuario digita quantos andares quer da pirâmide.
+	 *  - Programa realiza a operação.
+	 *  Felipe Rocha
+	 */
+	
+	inclua biblioteca Util --> u
+	
+funcao inicio()
+	{
+		inteiro n = 0, c = 0, a = 0 
+		cadeia espaco = " "
+		
+		escreva("Quantos andares? ")
+		leia(n)
+		c = n * 2
+		para(inteiro x = 1; x <= n; x++){
+			para(inteiro y = 1; y <= n; y++){
+				escreva("\n\t")
+				se (a <= n){
+					escreva(espaco)
+					espaco+= " "
+				}
+				a++
+				para(inteiro z = 1; z <= c; z++){
+					escreva("*")
+					u.aguarde(300)
+				}
+				c-=2
+			}
+		     n++
+			se(n >= a){
+					pare
+				}
+		}
+		n-=1
+		escreva("\n\nSua pirâmide invertida de ",n, " andares está pronta\n")
+	}
+}
