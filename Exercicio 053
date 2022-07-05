@@ -1,0 +1,69 @@
+programa
+{			
+			/* Programação Básica - Prof. Gustavo Guanabara
+			 *  Exercício 053 - Números Validados
+			 *  Felipe Rocha
+			 */
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Tipos --> t
+	funcao inicio()
+	{
+		inteiro n = 0, c = 0, soma = 0
+		cadeia teclado
+		caracter resp = ' '
+		
+		// Entrada de dados.
+		 faca {
+			enquanto(verdadeiro){
+				escreva("\n------------------------------------\n")
+				escreva("\t VALOR ", c+1)
+				escreva("\n------------------------------------\n")
+				escreva("Digite um número (entre 1 e 10): ")
+				leia(teclado)
+	
+				// Validação de dados, número entre 1 e 10
+				// Se valor > 10 ou letras, programa não valida.
+				se(t.cadeia_e_inteiro(teclado, 10)){
+					n = t.cadeia_para_inteiro(teclado, 10)
+				     se(n >= 1 e n <= 10){
+						pare				
+					} senao{
+						escreva("\n\t<< ERRO >>")
+						escreva("\nO número deve estar entre 1 e 10!\n")		
+				} 
+				} senao{
+					escreva("\n\t<< ERRO >>")
+					escreva("\nO valor deve ser um número inteiro!\n")
+				}
+			}
+				soma += n
+				c++
+				// Fim - validação dados.
+					
+					// Validando resposta S ou N.
+					enquanto(verdadeiro){
+					 		escreva("Quer continuar? [S/N] ")
+							leia(teclado)
+								se (t.cadeia_e_caracter(teclado)){ 
+									resp = t.cadeia_para_caracter(teclado)
+									se(resp == 'S' ou resp == 's' ou resp == 'N' ou resp == 'n'){
+										pare
+									} senao {
+										escreva("\n\t << ERRO >>")
+										escreva("\nResposta inválida, responda S ou N\n")	
+									}
+									
+								} senao{
+										escreva("\n\t << ERRO >>")
+										escreva("\nA resposta deve ser uma letra, tente novamente.\n")						
+								}
+							}
+							// Fim - Resposta
+				} enquanto(resp == 'S' ou resp == 's')
+					
+				escreva("\n-=-=-=-=-=-=-=-=-= RUSULTADO =-=-=-=-=-=-=-=-=")
+				escreva("\nAo todo, você digitou ", c, " valores")
+				escreva("\nA soma de todos eles foram ", soma)	
+				// Fim - Dados.
+	}
+}
