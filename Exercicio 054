@@ -1,0 +1,103 @@
+programa
+{
+	/* Programação Básica - Prof. Gustavo Guanabara
+	 *  Exercício 054 - Cadastro de pessoas
+	 *  Programa vai cadastrar nome e idade de várias pessoas.
+	 *  Vai mostrar o mais velho e mais jovem e quem são.
+	 *  Ultilizando validação de dados:
+	 *  - Nome deve conter pelo menos 3 letras.
+	 *  - Idade deve estar entre 0 e 130 anos.
+	 *  - Usuário vai decidir se continua ou não,
+	 *  programa só aceita S para Sim e N para Não.
+	 *  Felipe Rocha
+	 */
+	inclua biblioteca Tipos --> t
+	inclua biblioteca Texto --> txt
+	funcao inicio()
+	{
+		inteiro c = 1, idade = 0, ivelha = 0, ijovem = 0
+		cadeia nome = " ", pvelha = " ", pjovem = " ", teclado
+		caracter resp = ' '		
+		
+		// Entrada de dados.
+		faca{
+			escreva("----------------------------------------")
+			escreva("\n\t PESSOA ", c)
+			escreva("\n----------------------------------------")
+				
+				// Validação do nome.
+				enquanto(verdadeiro){
+					escreva("\nNome: ")
+					leia(teclado)
+					se (txt.numero_caracteres(teclado) >= 3){
+						nome = teclado
+						pare
+					} senao{	
+						escreva("<< ERRO >> Nome deve conter pelo menos 3 letras!")
+					}
+				}
+				// Fim - Validação nome.
+			
+			// Validação idade.
+			enquanto(verdadeiro){
+			escreva("Idade: ")
+			leia(teclado)
+			se(t.cadeia_e_inteiro(teclado, 10)){
+				idade = t.cadeia_para_inteiro(teclado, 10)
+					se(idade >= 0 e idade <= 130){
+					pare
+				}senao{
+					escreva("<< ERRO >> Idade deve estar entre 0 e 130 anos!\n")
+				}
+			} senao{
+				escreva("<< ERRO >> A idade deve ser um número inteiro!\n")
+			}
+			}
+			// Fim - Validação idade.
+						
+				// Dados para pessoa jovem e velha.
+				se( c == 1){
+					pvelha = nome
+					pjovem = nome				
+					ivelha = idade
+					ijovem = idade	
+					
+				} se(idade > ivelha){
+						ivelha = idade
+						pvelha = nome
+						
+					} se(idade < ijovem){
+						ijovem = idade
+						pjovem = nome
+					}
+				// Fim - Dados jovem e velha.	
+				
+				// Validando Resposta.
+				enquanto(verdadeiro){
+					escreva("Quer continuar? [S/N]: ")
+					leia(teclado)
+					se(txt.numero_caracteres(teclado) == 1){
+						resp = t.cadeia_para_caracter(teclado)
+						se(resp == 'N' ou resp == 'n' ou resp == 'S' ou resp == 's'){
+						pare
+					} senao{
+						escreva("<< ERRO >> Digite [S] para Sim ou [N] para Não! \n")
+					}
+					}senao{
+						escreva("<< ERRO >> O valor deve ter apenas uma letra!\n")
+					}
+				}
+				// Fim - Resposta.
+		c++	
+		}enquanto(resp == 'S' ou resp == 's')
+		// Fim - Entrada de dados.	
+
+		c -= 1
+		escreva("\n-=-=-=-=-=-=-=-=- RESULTADO -=-=-=-=-=-=-=-=-")
+		escreva("\nAo todo, você cadastrou ", c, " pessoas.") 
+		escreva("\n",txt.caixa_alta(pvelha), " é a pessoa mais velha, com ", ivelha, " anos.")
+		escreva("\n",txt.caixa_alta(pjovem), " é a pessoa mais jovem com ", ijovem, " anos.")
+		escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
+		
+	}
+}
