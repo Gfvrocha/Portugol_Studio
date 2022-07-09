@@ -1,0 +1,29 @@
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+
+		inteiro vet[10], c = 0
+		
+		escreva("{ Exercício 057 - Sorteio Invertido }\n")
+						
+		para(inteiro pos = 0; pos < u.numero_elementos(vet); pos++){
+			vet[pos] = sorteia(1, 10)
+		}
+		escreva("Vou sortear 10 valores ...\n")
+		para(inteiro pos = 0; pos < u.numero_elementos(vet); pos++){
+			escreva(c,":{",vet[pos],"}" , " ")
+			u.aguarde(300)	
+		c++		
+		}
+		
+		escreva("\nMostrando a sequência invertida ...\n")
+		para(inteiro pos = u.numero_elementos(vet) - 1; pos >= 0; pos--){
+			escreva(c-1,":{",vet[pos],"}" , " ")
+			u.aguarde(300)	
+		c--	
+		}		
+	}
+}
