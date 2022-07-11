@@ -1,0 +1,40 @@
+programa
+{
+	inclua biblioteca Util --> u
+	inclua biblioteca Tipos --> t
+	inclua biblioteca Matematica --> m
+	
+	funcao inicio()
+	{
+		escreva("{ Exercício 059 - Acima da Média }")
+		escreva("\n----------------------------------")
+		escreva("\n\t ESCOLA ESTUDONAUTA")
+		escreva("\n----------------------------------\n")
+		
+		real nota[6], media = 0.0, soma = 0.0
+		// Entrada das notas dos alunos.
+		para(inteiro p = 0; p < u.numero_elementos(nota); p++){
+			escreva("Nota do Aluno ",p,": ")
+			leia(nota[p])
+
+			soma = soma + nota[p] 
+		}
+		// Resultado da media
+		media = soma / u.numero_elementos(nota)
+		
+		escreva("------------------------------------")
+		escreva("\nA média da turma foi ", m.arredondar(media, 2))
+		escreva("\n------------------------------------")
+
+		// Resultado dos alunos acima da media
+		escreva("\nAlunos que ficaram acima da média: \n")
+		para(inteiro p = 0; p < u.numero_elementos(nota); p++){
+			se(nota[p] > media){
+				u.aguarde(500)
+				escreva(p, " ")
+									
+				}
+			}
+			escreva("\n\n")
+		}
+}
