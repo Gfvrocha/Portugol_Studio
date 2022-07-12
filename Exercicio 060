@@ -1,0 +1,68 @@
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro val[10], somaPares = 0, totImpar = 0, maior = 0, totOco = 0
+		
+		escreva("{ Exercício 060 - Analisando Números }")
+		escreva("\nSorteando ", u.numero_elementos(val), " valores...\n")
+		
+		// Sorteando valores / Maior valor
+		para(inteiro p = 0; p < u.numero_elementos(val); p++){
+			val[p] = u.sorteia(1, 10)
+			escreva(val[p],"..  " )
+			u.aguarde(300)
+
+			se(p == 0){
+				maior = val[0]
+			} senao{
+				se(val[p] > maior){
+					maior = val[p]
+				}
+			}
+		}
+		
+		escreva("\n------------------------------------------------")
+		escreva("\nAnalisando os valores sorteados ...\n")
+		
+		// Mostra a posição dos números pares e a soma total dos pares.
+		escreva("--> Valores pares nas posições: ")
+		para(inteiro p = 0; p < u.numero_elementos(val); p++){
+			se(val[p] % 2 == 0){
+				u.aguarde(400)
+				escreva(p, " ")
+				
+				somaPares = somaPares + val[p]
+			}
+		}
+		escreva("\n\t--> Soma dos pares: ", somaPares)
+		
+		// Mostra a posição dos números ímpares e a qauntidade de ímpares sorteado
+		escreva("\n--> Valores ímpares nas posições: ")
+		para(inteiro p = 0; p < u.numero_elementos(val); p++){
+			se(val[p] % 2 == 1){
+				u.aguarde(400) 
+				escreva(p, " ")
+				totImpar++
+			}
+		}
+		escreva("\n\t--> Quantidade de Ímpares: ", totImpar)
+
+		escreva("\n--> Maior valor sorteado: ", maior)
+
+		// Mostra as posições dos maiores valores sorteados. 
+		escreva("\n\t--> Maior valor ocorreu nas posições: ")
+		para(inteiro p = 0; p < u.numero_elementos(val); p++){
+			se(val[p] == maior){
+				u.aguarde(400)
+				escreva(p, " ")
+				totOco ++
+				}
+			
+			}
+			escreva("\n\t--> Total de ocorrências: ", totOco)
+			escreva("\n------------------------------------------------")
+		}
+}
