@@ -1,0 +1,57 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		cadeia nome[6]
+		inteiro totPos = 0
+
+		escreva("{ Exercício 061 - Analisando Nomes }\n")
+
+		para(inteiro p = 0; p < u.numero_elementos(nome); p++){
+			escreva("Nome para a posição [",p,"]: ")
+			leia(nome[p])
+							
+		}
+		escreva("===== 6 NOMES CADASTRADOS COM SUCESSO ===== \n")
+		escreva("--------------- ANALISANDO ---------------- \n")
+		u.aguarde(1000)
+		
+		escreva("Nomes com menos de ", u.numero_elementos(nome)," letras:\n")
+		
+		para(inteiro p = 0; p < u.numero_elementos(nome); p++){
+			se(txt.numero_caracteres(nome[p]) < 6){
+					escreva("[",p,"] = ",nome[p], " ")
+					u.aguarde(400)
+					totPos++
+				}
+		}
+		escreva("\n\tTOTAL = ",totPos)
+		escreva("\nNomes que começam com vogal:\n")
+		caracter primL
+		inteiro totprimL = 0
+		para(inteiro p = 0; p <u.numero_elementos(nome); p++){
+			primL = txt.obter_caracter(nome[p], 0)
+			
+			se (primL == 'A' ou primL == 'E' ou primL == 'I' ou primL == 'O' ou primL == 'U'){
+				escreva("[",p,"] = ",nome[p], " ")
+					u.aguarde(400)
+					totprimL++
+			}
+		}
+		escreva("\n\tTOTAL = ",totprimL)
+		escreva("\nNomes que posuem letra S:\n")
+		inteiro totS = 0
+		para(inteiro p = 0; p <u.numero_elementos(nome); p++){
+			se(txt.posicao_texto("S", nome[p], 0) != -1){
+				escreva("[",p,"] = ",nome[p], " ")
+					u.aguarde(400)
+					totS++
+			}
+		}
+		escreva("\n\tTOTAL = ",totS)
+		escreva("\n\n")
+	}
+}
