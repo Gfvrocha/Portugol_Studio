@@ -1,0 +1,40 @@
+programa
+{
+	inclua biblioteca Tipos --> tip
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		cadeia nome[3]
+		caracter sexo[3]
+		real s[3]
+		
+		escreva("{ EXERCÍCIO 062 - Listagem de Dados }\n")
+		
+		para(inteiro p = 0; p < u.numero_elementos(nome); p++){
+			escreva("===== CADASTRO ",p, " ======")
+			
+			escreva("\nNome: ")
+			leia(nome[p])
+			
+			escreva("Sexo [M/F]: ")
+			leia(sexo[p])
+			
+			escreva("Salário: ")
+			leia(s[p])
+		}
+		escreva("\n\t LISTAGEM COMPLETA \n")
+		escreva("------------------------------------------\n")
+		escreva("NOME \t\t\tSEXO \tSALÁRIO \n") 
+		escreva("------------------------------------------\n")
+		
+		para(inteiro p = 0; p < u.numero_elementos(nome); p++){
+			
+			escreva(nome[p], "\t\t\t", sexo[p], "\t", s[p],"\n")
+			u.aguarde(1000)
+		}
+	}
+		 
+	
+}
