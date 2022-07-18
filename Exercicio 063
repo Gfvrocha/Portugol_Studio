@@ -1,0 +1,45 @@
+programa
+{
+	inclua biblioteca Matematica --> m
+	inclua biblioteca Texto --> txt
+	inclua biblioteca Util
+ --> u
+	
+	funcao inicio()
+	{
+		cadeia nome[6], maiorNome = "", menorNome = ""
+		inteiro idade[6], maior = 0, menor = 0
+		real media = 0.0
+		
+		escreva("{ EXERCÍCIO 063 - Pessoas e Idade } \n")
+		para(inteiro p = 0; p < u.numero_elementos(nome); p++){
+			escreva("Nome da pessoa [",p,"]: ")
+			leia(nome[p])
+			
+			escreva("Idade de ",txt.caixa_alta(nome[p]),": ")
+			leia(idade[p])
+
+			se(idade[p] > maior){
+				maior = idade[p]
+				maiorNome = nome[p]
+			}
+			se(idade[p] < maior){
+				menor = idade[p]
+				menorNome = nome[p]
+			}
+						
+			media = media + idade[p]
+			
+		}
+		media = media / u.numero_elementos(idade)
+		u.aguarde(400)
+		escreva("========== ANALISANDO PESSOAS CADASTRADAS ==========")
+		escreva("\nMédia de idade: ",m.arredondar(media, 2), " anos")
+		escreva("\nPessoas acima da média:")
+
+		escreva("\n----------------------------------------------------")
+		escreva("\nMaior idade do grupo: ", maior, " anos")
+		escreva("\nPessoa (s) com a maior idade:")
+		escreva("\n\t --> ",txt.caixa_alta(maiorNome))
+	}
+}
