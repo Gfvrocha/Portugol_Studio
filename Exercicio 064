@@ -1,6 +1,5 @@
 programa
 {
-	
 	/* Exercício 064
 	 *  Programa vai gerar (sortear) uma matriz de 4x4.
 	 *  Mostrar na tela a soma de cada linha da matriz sorteada.
