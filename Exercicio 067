@@ -1,0 +1,78 @@
+programa
+{
+	
+	/* Exercício 067.
+	 *  
+	 *  - Programa vai gerar uma matriz de 5x5.
+	 *  - Mostrar a média dos valores gerados.
+	 *  - Mostrar os valores acima da média na segunda Linha.
+	 *  - Mostrar os valores abaixo da média na terceira Coluna.
+	 *  
+	 *  Felipe Rocha.
+	 */
+	 
+	inclua biblioteca Util --> u
+	inclua biblioteca Matematica --> m
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+		inteiro valor[5][5], soma = 0
+		real media
+
+		escreva("{ EXERCÍCIO 067 - Média de Valores }\n")
+		
+		// Gerando dados para matriz.
+		para(inteiro l = 0; l < u.numero_linhas(valor); l++){
+			para(inteiro c = 0; c < u.numero_colunas(valor); c++){
+				valor[l][c] = sorteia(1, 10)
+
+				escreva(valor[l][c],"\t")
+				u.aguarde(300)
+
+				soma += valor[l][c]
+			}
+			escreva("\n")
+		}
+		u.aguarde(1000)
+				
+		media = t.inteiro_para_real(soma) / 25
+		
+		escreva("-----------------------------------------------\n")
+		escreva("A média dos valor gerados é ",m.arredondar(media, 3), "\n")
+		escreva("-----------------------------------------------\n")
+		
+		// Valores acima da média na segunda linha.
+		u.aguarde(1000)
+		
+		inteiro mAcima = 0
+		
+		escreva("Na segunda linha, os valores acima da média são:\n")
+		para(inteiro c = 0; c < u.numero_colunas(valor); c++){
+			se(valor[1][c] > media){
+				escreva("\n[1][",c,"] = " ,valor[1][c])
+				mAcima++
+				
+				}
+			}
+			escreva("\nTOTAL = ",mAcima, " ocorrência(s).\n")
+
+		// Valores abaixo da média na terceira coluna.
+		u.aguarde(1000)
+		
+		inteiro mAbaixo = 0
+		
+		escreva("-----------------------------------------------\n")
+		escreva("Na terceira coluna, os valores abaixo da média são:\n")
+		
+		para(inteiro l = 0; l < u.numero_linhas(valor); l++){
+			se(valor[l][2] < media){
+				escreva("\n[",l,"][2] = " ,valor[l][2])
+				mAbaixo++
+				
+				}
+			}
+			escreva("\nTOTAL = ",mAbaixo, " ocorrência(s).\n")
+			escreva("-----------------------------------------------\n")
+	}
+}
