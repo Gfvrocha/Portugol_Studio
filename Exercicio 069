@@ -1,0 +1,43 @@
+programa
+{
+	inclua biblioteca Util --> u
+	/* Exercício 069: Faça um programa que crie uma rotina 
+	 *  capaz de personalizar mensagens na tela do usuário.
+	 */
+	funcao vazio meu_escreva(cadeia txt, inteiro quant, inteiro borda) {
+		
+		cadeia faixa
+		
+		escolha (borda) {
+			caso 1:
+				faixa = "+----------==========----------+\n"
+				pare
+			caso 2:
+				faixa = "+~~~~~~~~~~^^^^^^^^^^~~~~~~~~~~+\n"
+			pare
+
+			caso 3: 
+				faixa = "+<<<<<<<<<<__________>>>>>>>>>>+\n"
+				pare
+			caso contrario:
+				faixa = ""
+				pare
+		}
+		
+		escreva("\n", faixa)
+		
+		para(inteiro c = 1; c <= quant; c++){
+			 escreva(txt, "\n")
+			 u.aguarde(400)
+		}
+		
+		escreva("\n", faixa)
+	}
+	funcao inicio()
+	{
+		meu_escreva("Sempre altaneiro", 1 , 1)
+		meu_escreva("És do Brasil", 3, 2)
+		meu_escreva("O clube mais brasileiro", 2, 3)
+		meu_escreva("Corinthians !!", 5, 0)
+	}
+}
