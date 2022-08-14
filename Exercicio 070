@@ -1,0 +1,26 @@
+programa
+{
+	/* Exercício 070: Programa vai mostrar um quadrado na tela,
+	 *  passando por parametro.
+	 */
+	inclua biblioteca Util --> u
+	
+	funcao quadrado(inteiro tamanho){
+		
+		para(inteiro l = 1; l <= tamanho; l++) {
+			para(inteiro c = 1; c <= tamanho; c++){
+				escreva("██")
+				u.aguarde(50)
+			}
+			escreva("\n")
+		}
+		escreva(tamanho, " X " , tamanho , "\n\n")
+	}
+	
+	funcao inicio()
+	{
+		quadrado(5)
+		quadrado(8)
+		quadrado(2)
+	}
+}
