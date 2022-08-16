@@ -1,0 +1,29 @@
+programa
+{	
+	/* Exercício 072: Fazer um programa que mostre a	
+	 *  tabuada que o usuário digitar, utilizando função.
+	 */
+	 
+	inclua biblioteca Util
+
+	funcao tabuada(inteiro n) {
+		
+		escreva("\n-=-=-=-=- TABUADA DE " , n , " -=-=-=-=-\n")
+		Util.aguarde(1000)
+		
+		para(inteiro c = 1; c <= 10; c++) {
+			escreva(n, " x " , c , " = " , (n * c), " \n")
+			Util.aguarde(300)
+		}
+		escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+	}
+	
+	funcao inicio()
+	{
+		inteiro num
+		escreva("Quer ver a tabuada de qual número? ")
+		leia(num)
+		tabuada(num)
+		
+	}
+}
