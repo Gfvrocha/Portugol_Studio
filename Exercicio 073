@@ -1,0 +1,23 @@
+programa
+{
+	/* Exercício 073: Faça um programa que mostre uma contagem
+	 *  personalizada na tela, utilizando uma função().
+	 */
+	 
+	inclua biblioteca Util --> u
+	
+	funcao vazio contagem(inteiro i, inteiro f, inteiro p) {
+		escreva("---- CONTANDO DE " , i , " ATÉ " , f , " ----\n")
+		para(inteiro c = i; c <= f; c+= p) {
+			escreva(c , " -> ")
+			u.aguarde(300)
+		}
+		escreva("FIM!\n\n")
+	}
+	funcao inicio()
+	{
+		
+		contagem(0, 10, 2)
+		contagem(10, 50, 5)
+	}
+}
