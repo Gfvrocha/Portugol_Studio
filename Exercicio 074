@@ -1,0 +1,40 @@
+programa
+{
+	/* Exercício 074: Faça um programa que mostre uma contagem
+	 *  personalizada na tela, utilizando uma função().
+	 *  - Agora mostra também contagem regressivas.  
+	 */
+	 
+	inclua biblioteca Util --> u
+	
+	funcao vazio contagem(inteiro i, inteiro f, inteiro p) {
+		escreva("---- CONTANDO DE " , i , " ATÉ " , f , " ----\n")
+		
+		se(p <= 0){
+			p *= -1
+		}
+		
+		para(inteiro c = i; c <= f; c += p) {
+			escreva(c , " -> ")
+			u.aguarde(300)
+
+		
+		}
+		se(i > f) {
+			para(inteiro c = i; c >= f; c -= p) {
+				escreva(c , " -> ")
+				u.aguarde(300)
+			}
+		}
+		
+		escreva("FIM!\n\n")
+	}
+	funcao inicio()
+	{
+		
+		contagem(0, 10, 2)
+		contagem(10, 50, 5)
+		contagem(10, 2, 1)
+		contagem(50, 0, 10)
+	}
+}
